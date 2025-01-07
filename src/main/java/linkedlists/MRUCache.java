@@ -19,7 +19,7 @@ public class MRUCache {
         tail.prev=head;
     }
     public int get(int key){
-        if(capMap.containsKey(key)){
+        if (capMap.containsKey(key)) {
             //remove that node
             DoubleNode node = capMap.get(key);
             removeFromHead(node);
