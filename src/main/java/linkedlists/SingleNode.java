@@ -2,11 +2,11 @@ package linkedlists;
 
 public class SingleNode {
     int data;
-    SingleNode next;
+    public SingleNode next;
 
 
-    SingleNode(int data){
-        this.data = data;
+    public SingleNode(int x){
+        data = x;
         this.next = null;
     }
 }
