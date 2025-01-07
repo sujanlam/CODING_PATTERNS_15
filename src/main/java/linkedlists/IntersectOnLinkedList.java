@@ -33,6 +33,7 @@ public class IntersectOnLinkedList {
             }
             headB = headB.next;
         }
+        //Else return null
         return null;
     }
 }
