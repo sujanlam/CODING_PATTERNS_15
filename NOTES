@@ -5,3 +5,4 @@ PriorityQueue<ListNode> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.
 3) Add heads of all 3 linkedlists to the prioroity Queue
 4) While queue is not empty ; pop the lowest one and if there are still elements left offer them popped.next
 5) Return dummy.next
+
