@@ -5,3 +5,19 @@ PriorityQueue<ListNode> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.
 3) Add heads of all 3 linkedlists to the prioroity Queue
 4) While queue is not empty ; pop the lowest one and if there are still elements left offer them popped.next
 5) Return dummy.next
+
+
+
+Binary Tree Validation: Basically, if a subtree has a height diff >1 then it is not a binary tree.
+
+                5
+
+
+           /         \
+         2            7
+        / \            \
+      1     4           9
+           /          /
+          3          6
+
+From 7: Left height = 0 and Right height = 2 (2 edges) so its not a valid binary tree.
