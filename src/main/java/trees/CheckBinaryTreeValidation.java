@@ -2,7 +2,7 @@ package trees;
 
 import java.util.Stack;
 
-public class CheckBinaryTreeValidationFromNode {
+public class CheckBinaryTreeValidation {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
