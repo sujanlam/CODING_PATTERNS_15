@@ -1,15 +1,17 @@
-package binarytree;
+package trees;
+
+import binarytree.TreeNode;
 
 import java.util.*;
 
 public class BinaryTree {
-    public static void printAllNodesByLevels(TreeNode root){
+    public static void printAllNodesByLevels(binarytree.TreeNode root){
         if(root == null){
             return;
         }
 
         //Queue for level order traversal
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<binarytree.TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
         while (!queue.isEmpty()){
