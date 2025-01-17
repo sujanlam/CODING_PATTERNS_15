@@ -37,7 +37,7 @@ public class AllRightNodesBinaryTree {
             for (int i = 0; i < levelSize; i++) {
                 TreeNode current = queue.poll();
                 if(i == levelSize - 1){
-                    result.add(current.val);
+                    result.add(current.value);
                 }
                 if(current.left != null){
                     queue.offer(current.left);

@@ -20,11 +20,11 @@ public class IsBinarySearchTreeValid {
         if (node == null) {
             return true; // Base case: null node is valid
         }
-        if (node.val <= lower_bound  || node.val >= upper_bound) {
+        if (node.value <= lower_bound  || node.value >= upper_bound) {
             return false; // Node violates BST bounds
         }
         // Recursively validate left and right subtrees
-        return is_within_bound(node.left, lower_bound, node.val)
-                && is_within_bound(node.right, node.val, upper_bound);
+        return is_within_bound(node.left, lower_bound, node.value)
+                && is_within_bound(node.right, node.value, upper_bound);
     }
 }
