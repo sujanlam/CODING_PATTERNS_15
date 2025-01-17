@@ -36,7 +36,62 @@ public class WidestBinaryTree {
     }
 
     public static int getALlNodesToRight(TreeNode root){
-        if (root == null) {
+        int max_width = 0;
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(new Node(root, 0));
+        while (!queue.isEmpty()){
+            int levelSize = queue.size();
+            int start = 0;
+            int end = 0;
+
+            for (int i = 0; i < levelSize; i++) {
+                Node current = queue.poll();
+                int index = current.index;
+
+                if(i == 0){
+                    start = index;
+                }
+                if(i == levelSize-1){
+                    end = index;
+                }
+                if(current.node.left != null){
+                    queue.offer(new Node(current.node.left, 2*current.index));
+                }
+                if(current.node.right != null){
+                    queue.offer(new Node(current.node.right, 2*current.index+1));
+                }
+            }
+            max_width = Math.max(max_width, end-start+1);
+        }
+        return max_width;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+if (root == null) {
             return 0;
         }
 
@@ -70,6 +125,4 @@ public class WidestBinaryTree {
             maxWidth = Math.max(maxWidth, end-start+1);
         }
 
-        return maxWidth;
-    }
-}
+        return maxWidth;*/

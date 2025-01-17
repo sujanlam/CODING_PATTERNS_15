@@ -21,3 +21,21 @@ Binary Tree Validation: Basically, if a subtree has a height diff >1 then it is 
           3          6
 
 From 7: Left height = 0 and Right height = 2 (2 edges) so its not a valid binary tree.
+
+
+Find the lowest common ancestor:
+1) Create a method "isNodePresent" with recursive call to check if the node exists in a path (DFS)
+private static boolean findPath(TreeNode root, List<TreeNode> path, int n) {}
+2) Create another method that has root, n1, n2
+3) Call "isNodePresent" method inside this method to check if node exists for both given nodes.
+if either of them return false: return null since there is no common
+4) Iterative over both paths
+
+
+Maximum Sum in a Continuous Path:
+=================================
+Get sum on every node and carry it to top recursively comparing the sum of two nodes: left and right
+
+Maximum Sum Binary Tree:
+==========================
+it considers all the nodes left and right whereas it just max of left and right on continuous sum.
