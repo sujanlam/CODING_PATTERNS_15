@@ -26,7 +26,7 @@ public class MaxSumOfContinousPathBinaryTree {
         int left = maxContinuousPathSum(root.left);
         int right = maxContinuousPathSum(root.right);
 
-        return root.val + Math.max(left, right);
+        return root.value + Math.max(left, right);
     }
 }
 
