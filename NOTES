@@ -39,3 +39,16 @@ Get sum on every node and carry it to top recursively comparing the sum of two n
 Maximum Sum Binary Tree:
 ==========================
 it considers all the nodes left and right whereas it just max of left and right on continuous sum.
+
+BACKTRACKING:
+============================================================
+def dfs(state):
+    if meets_termination_condition(state):
+        process_solution(state)
+        return
+
+    for decision in possible_decisions:
+        make_decision(state, decision)
+        dfs(state)
+        undo_decision(state, decision)
+============================================================
