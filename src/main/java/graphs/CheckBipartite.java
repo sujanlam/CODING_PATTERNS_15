@@ -28,10 +28,10 @@ public class CheckBipartite {
         return true;
     }
 
-    private static boolean bfsCheck(int[][] graph, int start, int[] colors) {
+    private static boolean bfsCheck(int[][] graph, int startNode, int[] colors) {
         Queue<Integer> queue = new LinkedList<>();
-        queue.add(start);
-        colors[start] = 1;
+        queue.add(startNode);
+        colors[startNode] = 1;
 
         while (!queue.isEmpty()){
             int current = queue.poll();
