@@ -1,7 +1,7 @@
 package linkedlists;
 
 public class SingleNode {
-    int data;
+    public int data;
     public SingleNode next;
 
 
