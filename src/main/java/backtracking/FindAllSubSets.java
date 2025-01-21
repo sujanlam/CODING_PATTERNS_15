@@ -5,16 +5,26 @@ import java.util.List;
 
 public class FindAllSubSets {
     public static void main(String[] args) {
-
+        int[] nums = {4,5,6};
+        List<List<Integer>> res = allSubsets(nums);
+        System.out.println(res);
     }
-    public List<List<Integer>> subsetsBackTrack(int[] nums, List<Integer> current, List<List<Integer>> res, int start) {
 
-        res.add(new ArrayList<>(current));
-        for (int i = 0; i < nums.length; i++) {
-            current.add(nums[i]);
-            subsetsBackTrack(nums, current, res, i+1);
-            current.remove(current.size()-1);
-        }
+    public static List<List<Integer>> allSubsets(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        subsetsBackTrack(0, new ArrayList(), res, nums);
         return res;
+    }
+
+    public static void subsetsBackTrack(int startIndex, List<Integer> current, List<List<Integer>> res, int[] nums) {
+        if (startIndex > nums.length) {
+            return;
+        }
+        res.add(new ArrayList<>(current));
+        for (int i = startIndex; i < nums.length; i++) {
+            current.add(nums[i]);
+            subsetsBackTrack(i+1, current, res, nums);
+            current.removeLast();
+        }
     }
 }

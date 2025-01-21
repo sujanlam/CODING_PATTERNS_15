@@ -11,8 +11,6 @@ PriorityQueue<ListNode> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.
 Binary Tree Validation: Basically, if a subtree has a height diff >1 then it is not a binary tree.
 
                 5
-
-
            /         \
          2            7
         / \            \
@@ -51,4 +49,9 @@ def dfs(state):
         make_decision(state, decision)
         dfs(state)
         undo_decision(state, decision)
+============================================================
+
+KNAPSACK PROBLEM:
+============================================================
+V[r][c] = Math.max(V[r-1, c], V[r-1, c - c[i]] +P[r])
 ============================================================

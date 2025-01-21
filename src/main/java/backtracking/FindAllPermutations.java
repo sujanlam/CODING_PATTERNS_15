@@ -27,7 +27,7 @@ public class FindAllPermutations {
             }
             current.add(n);
             backtrack(res, current, nums);
-            current.remove(current.size()-1);
+            current.removeLast();
         }
     }
 }
