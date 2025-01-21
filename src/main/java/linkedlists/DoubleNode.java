@@ -6,7 +6,7 @@ public class DoubleNode {
     DoubleNode next;
     DoubleNode prev;
 
-    DoubleNode(int key, int value){
+    public DoubleNode(int key, int value){
             this.key = key;
             this.value = value;
         }
